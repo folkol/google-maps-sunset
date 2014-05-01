@@ -12,13 +12,12 @@ import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 
-@Path("sunset")
+@Path("")
 public class EarthtoolsProxy {
 
     @GET
-    @Path("{latitude}/{longitude}")
-    public String sun(@PathParam("latitude") String latitude,
-                         @PathParam("longitude") String longitude)
+    @Path("sunset/{latitude}/{longitude}")
+    public String sun(@PathParam("latitude") String latitude, @PathParam("longitude") String longitude)
     {
         WebResource resource = Client.create().resource("http://www.earthtools.org/sun-1.0");
         Calendar calendar = Calendar.getInstance();
