@@ -11,7 +11,7 @@ import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 
 @Path("")
-public class Earthtools {
+public class EarthtoolsProxy {
 
     private static final String BASE_URL = "http://www.earthtools.org/sun";
 
