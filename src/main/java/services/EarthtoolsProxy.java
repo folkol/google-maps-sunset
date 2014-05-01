@@ -22,8 +22,8 @@ public class EarthtoolsProxy {
     {
         WebResource resource = Client.create().resource("http://www.earthtools.org/sun");
         Calendar calendar = Calendar.getInstance();
-        int day = calendar.get(Calendar.DAY_OF_WEEK);
-        int month = calendar.get(Calendar.DAY_OF_MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+        int month = 1 + calendar.get(Calendar.MONTH);
 
         String path = format("%s/%s/%d/%d/%d/%d", latitude, longitude, day, month, 2, 0);
         ClientResponse response = resource.path(path).get(ClientResponse.class);
