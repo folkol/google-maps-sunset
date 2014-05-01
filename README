@@ -1,0 +1,2 @@
+mvn package
+Deploy target/google-maps-sunset.war to some Java EE container (wildfly-as?)
